@@ -1,0 +1,12 @@
+%%h5info('mysim13.hdf5')
+%h5disp('mysim13.hdf5','/PartType0/Coordinates')
+cc=h5read('mysim13.hdf5','/PartType0/Coordinates');
+bb=h5read('snapshot_001.hdf5','/PartType0/Coordinates');
+%scatter3(cc(1,:),cc(2,:),cc(3,:))
+ci=h5read('mysim13.hdf5','/PartType0/ParticleIDs');
+bi=h5read('snapshot_001.hdf5','/PartType0/ParticleIDs');
+ai=h5read('snapshot_000.hdf5','/PartType0/ParticleIDs');
+aa=h5read('snapshot_010.hdf5','/PartType0/Coordinates');
+av=h5read('snapshot_010.hdf5','/PartType0/Velocities');
+%quiver3(aa(1,:),aa(2,:),aa(3,:),av(1,:),av(2,:),av(3,:))
+scatter3(aa(1,:),aa(2,:),aa(3,:),10)
